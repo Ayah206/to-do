@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html {
+        height: 100%;
+    }
+    body {
+        font-family: cursive;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url('confetti.gif');
+        padding-top: 50px;
+        height: 100%;
+    }
+    .firstdiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: whitesmoke; 
+        padding: 10px;
+        width: 40%;
+        height: max-content; 
+        opacity: 0.9;
+        font-weight: bolder;
+        box-shadow: 5px 10px #888888;
+        border-radius: 6px;
+    }
+    .body {
+        display : flex;
+        flex-direction : column;
+        width : min-content
+    }
+    .overall {
+        display : flex;
+        flex-direction :column;
+        width : min-content;
+        align-items: center;
+
+    }
+    .item {
+        display: inline-flex;
+        border: 1px black solid;
+        width: min-content 
+        
+    }
+    .item button {
+        background-color: rgb(4, 4, 19);
+        color : white;
+        border: none;
+        padding: 10px
+    }
+    input[type=text] {
+        border : none;
+        width: 300px;
+        padding: 10px
+    }
+    input:focus, button:focus {
+        outline: none;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0px
+    }
+    .flexlist {
+        display : flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        border-bottom: 1px black solid
+    }
+    .lispan1options{
+       display:none;
+       padding-left: 20px;
+    }
+    .lispan1{
+        display:flex;
+        align-items: flex-end;
+    }
+    .lispan1:hover .lispan1options{
+       display:inline-flex; 
+       position: absolute;
+    }
+    .lispan1options:hover {
+       display:inline; 
+       position: absolute;
+    }
+    .lispan2{
+        padding-left: 10px;
+    }
+    .spandiv{
+        display: flex;
+        align-items:center
+    }
+    .lispan1 button{
+        font-weight: bolder;
+    }
+
+    @media screen and (min-width: 600px) and (max-width: 900px) {
+        .firstdiv {
+            width: 60%;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        .firstdiv {
+            width: 90%;
+        }
+        .lispan1options{
+            flex-direction: column;
+        }
+        .lispan1{
+            align-items: center;
+        }
+    }
+
+</style>
+<body>
+    <div class="firstdiv">
+        <div class = "overall">
+            <div class="head">
+                <h2>MY TODO LIST</h2>
+            </div>
+            <div class="body">
+                <div class="item">
+                    <input type="text" name="" id="item">
+                    <button id = "init" onclick = "add()">add</button>
+                </div>
+                <ul id = "todolist">
+                </ul>
+            </div>
+        </div>
+    </div>
+<script src="jstodo.js"></script>
+</body>
+</html>
