@@ -99,3 +99,9 @@ del = () => {
 function edit(){
     console.log('work naaa')
 }
+
+// emaya
+function emaya(){
+   const emaya = 'emaya groups';
+   console.log(emaya)
+}
