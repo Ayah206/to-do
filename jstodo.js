@@ -89,14 +89,14 @@ check = () => {
 }
 
 //delete an item from the array
-del = () => {
+del = (id) => {
     var child = document.getElementById('list'+todoitemplus.indx)
     ul.removeChild(child);
     todos.splice(todoitemplus.indx, 1) 
     return todos 
 }
 
-function edit(){
+function edit(id){
     console.log('work naaa')
 }
 
