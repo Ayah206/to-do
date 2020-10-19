@@ -78,24 +78,25 @@ function add(){
 }
 
 //change text decoration for all checked items to line-through
-check = () => {
-        var comfirm = document.getElementById('check' +todoitemplus.indx)
+check = (id) => {
+        var comfirm = document.getElementById('check' +id)
         if (comfirm.checked != false){
-            document.getElementById('li'+todoitemplus.indx).style.textDecoration = 'line-through'
+            document.getElementById('li'+id).style.textDecoration = 'line-through'
         }
         else {
-            document.getElementById('li'+todoitemplus.indx).style.textDecoration = 'none'
+            document.getElementById('li'+id).style.textDecoration = 'none'
         }
 }
 
 //delete an item from the array
 del = (id) => {
-    var child = document.getElementById('list'+todoitemplus.indx)
+    var child = document.getElementById('list'+id)
     ul.removeChild(child);
-    todos.splice(todoitemplus.indx, 1) 
-    return todos 
+    let todosplus = todos.filter(items => items.indx === id) 
+    todos = todosplus 
 }
 
+//make list item editable
 function edit(id){
     var editcon = document.getElementById('li'+id)
     editcon.setAttribute("contenteditable", "true")
