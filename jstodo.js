@@ -97,7 +97,9 @@ del = (id) => {
 }
 
 function edit(id){
-    console.log('work naaa')
+    var editcon = document.getElementById('li'+id)
+    editcon.setAttribute("contenteditable", "true")
+    console.log(editcon)
 }
 
 // emaya
