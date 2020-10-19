@@ -102,6 +102,9 @@ function edit(id){
     console.log(editcon)
 }
 
+window.localStorage.setItem('mylist', JSON.stringify(todos))
+var myList = JSON.parse(window.localStorage.getItem('mylist'))
+
 // emaya
 function emaya(){
    const emaya = 'emaya groups';
